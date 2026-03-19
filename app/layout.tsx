@@ -1,12 +1,13 @@
-import { Geist, Geist_Mono, Raleway } from "next/font/google"
+import {Sofia_Sans_Condensed,Spline_Sans_Mono } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
+import LenisSmoothScroll from "@/lib/Lenis"
 
-const raleway = Raleway({subsets:['latin'],variable:'--font-sans'})
+const sofia = Sofia_Sans_Condensed({ subsets: ["latin"], variable: "--font-sans" })
 
-const fontMono = Geist_Mono({
+const spline = Spline_Sans_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 })
@@ -20,10 +21,18 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", raleway.variable)}
+      className={cn(
+        "antialiased",
+        spline.variable,
+        "font-sans",
+        sofia.variable
+      )}
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <LenisSmoothScroll />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

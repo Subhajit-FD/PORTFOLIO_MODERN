@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "react-three-fiber": {
+      "source": "vercel-labs/json-render",
+      "sourceType": "github",
+      "computedHash": "f58c01f334782756fc16fd2af40e1aba9fc924e215fc19cd15be957fb196cdbf"
+    },
+    "threejs-skills": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "computedHash": "307fb8a4fc29adf9ab1abb96908f46cbdb5c5877d196d0511abb3fe98db1ae08"
+    }
+  }
+}
